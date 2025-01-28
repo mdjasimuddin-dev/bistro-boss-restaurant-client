@@ -18,33 +18,35 @@ const Navbar = () => {
   const navbarOptions = (
     <>
       <li>
-        <NavLink to="/" className="uppercase text-xl font-inter font-bold">
+        <NavLink to="/" className="uppercase text-xl hover:text-[#EEFF25] font-inter font-bold">
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
           to="/contact"
-          className="uppercase text-xl font-inter font-bold"
+          className="uppercase text-xl hover:text-[#EEFF25] font-inter font-bold"
         >
           Contact Us
         </NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink
+            to="/dashboard"
+            className="uppercase text-xl hover:text-[#EEFF25] font-inter font-bold"
+          >
+            Dashboard
+          </NavLink>
+        </li>
+      )}
       <li>
-        <NavLink
-          to="/dashboard"
-          className="uppercase text-xl font-inter font-bold"
-        >
-          Dashboard
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/menu" className="uppercase text-xl font-inter font-bold">
+        <NavLink to="/menu" className="uppercase text-xl hover:text-[#EEFF25] font-inter font-bold">
           Our Menu
         </NavLink>
       </li>
       <li>
-        <NavLink to="shop" className="uppercase text-xl font-inter font-bold ">
+        <NavLink to="/shop" className="uppercase text-xl hover:text-[#EEFF25] font-inter font-bold ">
           {" "}
           Our Shop
           <TiShoppingCart size={32} className="mr-2 relative rounded-full " />
@@ -56,7 +58,6 @@ const Navbar = () => {
 
       {user ? (
         <>
-          
           <button
             onClick={handleLogOut}
             className="btn btn-ghost uppercase text-xl font-inter font-bold"
@@ -75,7 +76,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/login"
-              className="uppercase text-xl font-inter font-bold"
+              className="uppercase text-xl hover:text-[#EEFF25] font-inter font-bold"
             >
               Sign In <FaUserCircle size={30} className="font-white" />
             </NavLink>

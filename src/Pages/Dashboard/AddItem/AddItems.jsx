@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../Component/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
 import { FaUtensils } from "react-icons/fa";
-import useAxiousPublic from "../../../Hooks/useAxiousPublic";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 
@@ -11,7 +11,7 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 
 const AddItems = () => {
 
-    const axiosPublic = useAxiousPublic()
+    const axiosPublic = useAxiosPublic()
     const axiosSecure = useAxiosSecure()
 
 

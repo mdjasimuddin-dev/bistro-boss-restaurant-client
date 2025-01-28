@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import SectionTitle from '../../../Component/SectionTitle/SectionTitle';
 import { useForm } from "react-hook-form";
 import { FaUtensils } from "react-icons/fa";
-import useAxiousPublic from '../../../Hooks/useAxiousPublic';
+import useAxiosPublic from '../../../Hooks/useAxiosPublic';
 import { useLoaderData } from 'react-router-dom';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
@@ -13,7 +13,7 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 const UpdateItems = () => {
     const item = useLoaderData()
     const { register, handleSubmit} = useForm();
-    const axiosPublic = useAxiousPublic()
+    const axiosPublic = useAxiosPublic()
     const axiosSecure = useAxiosSecure()
 
     console.log(item.data)

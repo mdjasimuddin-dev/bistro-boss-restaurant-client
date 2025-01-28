@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import useAxiousPublic from './useAxiousPublic';
+import useAxiosPublic from './useAxiosPublic';
 
 const useMenu = () => {
 
-    const axiosPublic = useAxiousPublic()
+    const axiosPublic = useAxiosPublic()
     // const [menu, setMenu] = useState([])
     // const [loading, setLoading] = useState(true)
 

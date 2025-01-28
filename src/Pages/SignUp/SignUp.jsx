@@ -4,7 +4,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
-import useAxiousPublic from '../../Hooks/useAxiousPublic';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 import SocialLogin from '../../Component/SocialLogin/SocialLogin';
 
 const SignUp = () => {
@@ -12,7 +12,7 @@ const SignUp = () => {
     const { userCreate } = useContext(AuthContext)
     const { register, reset, handleSubmit, watch, formState: { errors } } = useForm()
     const navigate = useNavigate()
-    const axiosPublic = useAxiousPublic()
+    const axiosPublic = useAxiosPublic()
 
     const onSubmit = (data) => {
         console.log(data)
@@ -61,7 +61,7 @@ const SignUp = () => {
     // }
 
     return (
-        <div className="bg-base-200 h-[750px] my-10">
+        <div className="bg-base-200 min-h-screen">
             <div className="flex flex-col md:flex-row-reverse gap-10 p-16">
                 <div className="flex flex-col w-1/2 items-center justify-center">
                     <img src={signupCover} alt="" className='' />

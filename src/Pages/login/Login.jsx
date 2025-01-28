@@ -66,7 +66,7 @@ const Login = () => {
     }
 
     return (
-        <div className="bg-base-200 h-[750px] my-10">
+        <div className="bg-base-200 min-h-screen">
             <div className="flex flex-col md:flex-row gap-10 p-16">
                 <div className="flex flex-col w-1/2 items-center justify-center">
                     <img src={logincover} alt="" className='' />
