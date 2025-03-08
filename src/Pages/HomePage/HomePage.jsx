@@ -5,8 +5,8 @@ import Featured from "../../Component/Featured/Featured";
 import Testimonials from "../../Component/Testimonials/Testimonials";
 import Recommend from "../../Component/Recommend/Recommend";
 import BistroBoss from "../../Component/Boss/BistroBoss";
-import Call from "../../Component/call/Call";
 import { Helmet } from "react-helmet-async";
+import Call from "../../Component/Call/Call";
 
 const HomePage = () => {
   return (
@@ -22,7 +22,9 @@ const HomePage = () => {
         <PopularMenu />
         <Call />
         <Recommend />
-        <Featured />
+      </div>
+      <Featured />
+      <div className="max-w-screen-xl mx-auto">
         <Testimonials />
       </div>
     </div>
